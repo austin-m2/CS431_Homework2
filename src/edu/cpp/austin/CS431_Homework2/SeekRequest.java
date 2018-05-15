@@ -12,14 +12,16 @@ public class SeekRequest {
     }
 
     public int get_delay() {
+        set_delay();
         return delay;
     }
 
-    public void set_delay() {
+    private void set_delay() {
         delay = time_finished - time_entered;
     }
 
     public double get_score() {
+        set_delay();
         return delay * Math.sqrt((double) delay);
     }
 
