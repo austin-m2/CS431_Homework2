@@ -1,3 +1,4 @@
+//Austin Morris
 package edu.cpp.austin.CS431_Homework2;
 
 public class SeekRequest {
@@ -18,6 +19,11 @@ public class SeekRequest {
 
     private void set_delay() {
         delay = time_finished - time_entered;
+    }
+
+    public double get_current_score(int time) {
+        int d = time - time_entered;
+        return d * Math.sqrt((double) d);
     }
 
     public double get_score() {
